@@ -1,0 +1,114 @@
+:root {
+    --basic-color: #26de81;
+    --extended-color: #eb7d3c;
+    --premium-color: #1ebdbd;
+    --bg-blue: #637df2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-card {
+    background: #fff;
+    width: 320px;
+    padding: 0 0 30px 0;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Cabeçalho com o recorte em V */
+.header {
+    padding: 30px 20px 50px 20px;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    margin-bottom: 20px;
+}
+
+.basic .header, .basic .btn { background-color: var(--basic-color); }
+.extended .header, .extended .btn { background-color: var(--extended-color); }
+.premium .header, .premium .btn { background-color: var(--premium-color); }
+
+.header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.price span {
+    font-size: 20px;
+    vertical-align: top;
+    margin: 5px;
+}
+
+/* Descrição e Lista */
+.description {
+    padding: 0 30px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.features {
+    list-style: none;
+    text-align: left;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.features li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check { color: #26de81; }
+.cross { color: #eb4d4b; }
+
+/* Botão */
+.btn {
+    border: none;
+    color: #fff;
+    padding: 12px 60px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
